@@ -44,6 +44,23 @@
       background-size: cover;
       background-position: center;
     }
+
+    .group {
+      position: relative;
+      overflow: hidden;
+    }
+
+    .group img {
+      transition: transform 0.3s ease;
+    }
+
+    .group:hover img {
+      transform: scale(1.05);
+    }
+
+    .group>div {
+      transition: opacity 0.3s ease;
+    }
   </style>
 </head>
 
@@ -136,14 +153,11 @@
     <main class=" about text-center relative z-10 py-10 ">
       <img src="./hinhvuonglon.png" alt=""
         class="shape absolute top-[40px] left-[80px] w-[50px] h-[50px] rotate-[30deg] z-0" />
-      <img src="./hinhvuongnho.png" alt=""
-        class="shape absolute top-[20px] right-[40px] w-[20px] h-[20px] z-0" />
+      <img src="./hinhvuongnho.png" alt="" class="shape absolute top-[20px] right-[40px] w-[20px] h-[20px] z-0" />
       <img src="./tamgiac.png" alt=""
         class="shape absolute bottom-[40px] left-[120px] w-[80px] h-[80px] rotate-[10deg] z-0" />
-      <img src="./hinhtron2.png" alt=""
-        class="shape absolute top-[100px] right-[180px] w-[80px] h-[80px] z-0" />
-      <img src="./ngugiac.png" alt=""
-        class="shape absolute bottom-[50px] right-[80px] w-[60px] h-[60px] z-0" />
+      <img src="./hinhtron2.png" alt="" class="shape absolute top-[100px] right-[180px] w-[80px] h-[80px] z-0" />
+      <img src="./ngugiac.png" alt="" class="shape absolute bottom-[50px] right-[80px] w-[60px] h-[60px] z-0" />
       <p class="text-[14px] text-[#b8102a] tracking-[0.3em] mb-2 font-semibold" style="letter-spacing: 0.3em">
         Về &nbsp; chúng &nbsp; tôi
       </p>
@@ -163,7 +177,8 @@
         đại, Việt Mỹ Úc cam kết đồng hành cùng phụ huynh trong hành trình nuôi
         dạy những đứa trẻ khỏe mạnh, tự tin và hạnh phúc mỗi ngày.
       </p>
-      <button class="bg-[#b8102a] text-white font-semibold rounded-full px-8 py-3 inline-flex items-center mx-auto"
+      <button
+        class="bg-[#b8102a] hover:bg-[#a00e25] hover:text-[#ffe08a] text-white font-semibold rounded-full px-8 py-3 inline-flex items-center mx-auto transition duration-300 ease-in-out"
         aria-label="Khám Phá Ngay">
         Khám Phá Ngay
         <svg class="ml-3 w-4 h-4" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
@@ -172,6 +187,7 @@
           <polyline points="12 5 19 12 12 19" />
         </svg>
       </button>
+
     </main>
   </div>
 
@@ -191,11 +207,12 @@
           </svg>
         </button>
         <!-- First card with overlay text -->
-        <div class="relative rounded-xl overflow-hidden w-[320px] h-[240px] flex-shrink-0">
+        <div class="relative rounded-xl overflow-hidden w-[320px] h-[240px] flex-shrink-0 group">
           <img alt="Two children wearing yellow hats interacting with a large cartoon cow painting in a classroom"
-            class="w-full h-full object-cover" height="240" src="./CT1.jpg" width="320" />
+            class="w-full h-full object-cover transition duration-300 group-hover:scale-110" height="240"
+            src="./CT1.jpg" width="320" />
           <div
-            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl p-4 flex flex-col justify-end">
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition duration-300">
             <h3 class="text-white font-bold text-[14px] leading-[18px] mb-1">
               KHÁM PHÁ TỰ NHIÊN - BÉ HỌC QUA TRẢI NGHIỆM
             </h3>
@@ -242,46 +259,55 @@
       </span>
     </h2>
     <div class="mt-12 flex flex-col sm:flex-row justify-center gap-8">
-      <div class="bg-[#D1273E] rounded-2xl max-w-sm flex-shrink-0">
+      <!-- Box 1 -->
+      <div class="group bg-[#D1273E] hover:bg-[#b81d33] rounded-2xl max-w-sm flex-shrink-0 transition duration-300">
         <img alt="Teacher with two kids smiling in classroom with colorful wall and rainbow"
-          class="rounded-t-2xl rounded-tl-[180px] px-4 py-4  w-full object-cover h-[280px]" height="280"
-          src="https://storage.googleapis.com/a1aa/image/42a58027-9a09-4310-f06a-415a1c1c1e87.jpg" width="400" />
-        <div class="p-6 text-white font-sans">
-          <h3 class="font-bold text-lg mb-2">
+          class="rounded-t-2xl rounded-tl-[180px] px-4 py-4 w-full object-cover h-[280px] transition duration-300 group-hover:scale-105"
+          height="280" src="https://storage.googleapis.com/a1aa/image/42a58027-9a09-4310-f06a-415a1c1c1e87.jpg"
+          width="400" />
+        <div class="p-6 text-white font-sans transition duration-300">
+          <h3 class="font-bold text-lg mb-2 group-hover:text-yellow-300 transition duration-300">
             CHĂM SÓC TẬN TÂM
           </h3>
-          <p class="font-normal text-sm leading-relaxed font-sans">
+          <p class="font-normal text-sm leading-relaxed group-hover:text-yellow-100 transition duration-300">
             Giáo viên yêu nghề, tận tụy, luôn đồng hành và thấu hiểu từng bước phát triển của trẻ.
           </p>
         </div>
       </div>
-      <div class="bg-[#0F3B7B] rounded-2xl max-w-sm flex-shrink-0">
+
+      <!-- Box 2 -->
+      <div class="group bg-[#0F3B7B] hover:bg-[#0c3267] rounded-2xl max-w-sm flex-shrink-0 transition duration-300">
         <img alt="Children sitting in circle with hands pointing to center on green grass"
-          class="rounded-t-2xl w-full px-4 py-4 object-cover h-[280px]" height="280"
-          src="https://storage.googleapis.com/a1aa/image/4f285ca1-29db-4756-4a53-8c2d26c594f4.jpg" width="400" />
-        <div class="p-6 text-white font-sans">
-          <h3 class="font-bold text-lg mb-2">
+          class="rounded-t-2xl w-full px-4 py-4 object-cover h-[280px] transition duration-300 group-hover:scale-105"
+          height="280" src="https://storage.googleapis.com/a1aa/image/4f285ca1-29db-4756-4a53-8c2d26c594f4.jpg"
+          width="400" />
+        <div class="p-6 text-white font-sans transition duration-300">
+          <h3 class="font-bold text-lg mb-2 group-hover:text-yellow-300 transition duration-300">
             PHÁT TRIỂN TOÀN DIỆN
           </h3>
-          <p class="font-normal text-sm leading-relaxed font-sans">
+          <p class="font-normal text-sm leading-relaxed group-hover:text-yellow-100 transition duration-300">
             Chương trình học kết hợp kỹ năng sống, nghệ thuật, vận động giúp trẻ phát triển hài hòa.
           </p>
         </div>
       </div>
-      <div class="bg-[#D1273E] rounded-2xl max-w-sm flex-shrink-0">
+
+      <!-- Box 3 -->
+      <div class="group bg-[#D1273E] hover:bg-[#b81d33] rounded-2xl max-w-sm flex-shrink-0 transition duration-300">
         <img alt="Modern safe playground with slide and colorful toys on green artificial grass"
-          class="rounded-t-2xl px-4 py-4 w-full rounded-tr-[180px] object-cover h-[280px]" height="280"
-          src="https://storage.googleapis.com/a1aa/image/8afdeba4-8147-44e9-0a11-dce147019af0.jpg" width="400" />
-        <div class="p-6 text-white font-sans">
-          <h3 class="font-bold text-lg mb-2">
+          class="rounded-t-2xl px-4 py-4 w-full rounded-tr-[180px] object-cover h-[280px] transition duration-300 group-hover:scale-105"
+          height="280" src="https://storage.googleapis.com/a1aa/image/8afdeba4-8147-44e9-0a11-dce147019af0.jpg"
+          width="400" />
+        <div class="p-6 text-white font-sans transition duration-300">
+          <h3 class="font-bold text-lg mb-2 group-hover:text-yellow-300 transition duration-300">
             MÔI TRƯỜNG AN TOÀN, HIỆN ĐẠI
           </h3>
-          <p class="font-normal text-sm leading-relaxed font-sans">
+          <p class="font-normal text-sm leading-relaxed group-hover:text-yellow-100 transition duration-300">
             Không gian sạch đẹp, thân thiện, trang bị đầy đủ cho nhu cầu học tập và vui chơi của bé.
           </p>
         </div>
       </div>
     </div>
+
   </div>
   <div class="max-w-[1366] bg mx-auto px-4 py-12 relative">
     <h2 class="text-center text-[#c81e39] text-3xl sm:text-4xl font-bold mb-10 select-none"
@@ -289,29 +315,42 @@
       HOẠT ĐỘNG CỦA BÉ
     </h2>
     <div class="flex items-center justify-center gap-6 max-w-5xl mx-auto relative">
+      <!-- Nút previous -->
       <button aria-label="Previous"
-        class="absolute left-0 top-1/2 -translate-y-1/2 bg-[#c81e39] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-[#a71a31] transition">
-        <i class="fas fa-chevron-left text-lg">
-        </i>
+        class="absolute left-0 top-1/2 -translate-y-1/2 bg-[#c81e39] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-[#a71a31] hover:scale-110 transition duration-300">
+        <i class="fas fa-chevron-left text-lg"></i>
       </button>
+
+      <!-- Ảnh 1 -->
       <img alt="Children in white dresses and casual clothes posing on green grass with balloons and 20/11 banner"
-        class="rounded-xl object-cover w-[320px] h-[220px]" height="220" src="./hd1.jpg" width="320" />
+        class="rounded-xl object-cover w-[320px] h-[220px] hover:scale-105 hover:shadow-xl transition duration-300"
+        height="220" src="./hd1.jpg" width="320" />
+
+      <!-- Ảnh 2 -->
       <img alt="Kids in red shirts doing painting activity on yellow table"
-        class="rounded-xl object-cover w-[320px] h-[220px]" height="220" src="./hd2.jpg" width="320" />
+        class="rounded-xl object-cover w-[320px] h-[220px] hover:scale-105 hover:shadow-xl transition duration-300"
+        height="220" src="./hd2.jpg" width="320" />
+
+      <!-- Ảnh 3 -->
       <img alt="Two kids working on art projects at green table with colorful background"
-        class="rounded-xl object-cover w-[320px] h-[220px]" height="220" src="./hd3.jpg" width="320" />
+        class="rounded-xl object-cover w-[320px] h-[220px] hover:scale-105 hover:shadow-xl transition duration-300"
+        height="220" src="./hd3.jpg" width="320" />
+
+      <!-- Nút next -->
       <button aria-label="Next"
-        class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#c81e39] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-[#a71a31] transition">
-        <i class="fas fa-chevron-right text-lg">
-        </i>
+        class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#c81e39] text-white rounded-full w-12 h-12 flex items-center justify-center shadow-lg hover:bg-[#a71a31] hover:scale-110 transition duration-300">
+        <i class="fas fa-chevron-right text-lg"></i>
       </button>
     </div>
+
+    <!-- Nút "Xem tất cả" -->
     <div class="flex justify-center mt-10">
       <button
-        class="bg-[#c81e39] text-white rounded-full px-6 py-2 text-sm sm:text-base font-semibold hover:bg-[#a71a31] transition">
+        class="bg-[#c81e39] hover:text-[#ffe08a] text-white rounded-full px-6 py-2 text-sm sm:text-base font-semibold hover:bg-[#a71a31] hover:scale-105 transition duration-300">
         Xem tất cả
       </button>
     </div>
+
   </div>
 
   <div class="max-w-[1366] bg-[#fefcf6] mx-auto px-6 py-10">
@@ -331,11 +370,15 @@
         <img src="./muitentrai.png" alt="">
       </button>
       <div class="flex gap-6 w-full justify-between">
-        <div class="flex-shrink-0 max-w-[370px]">
+        <!-- Block 1 -->
+        <div
+          class="group flex-shrink-0 max-w-[370px] transition duration-300 transform hover:scale-105 hover:shadow-xl bg-white rounded-xl p-1">
           <img alt="Children playing in blue sacks at an outdoor event with decorations and rainbow wall"
             class="rounded-xl w-full object-cover" height="250" src="./tt1.jpg" width="370" />
-          <div class="mt-3 text-[#c81e3f] text-xs font-semibold flex items-center gap-1 select-none">
-            <svg class="h-3 w-3" fill="currentColor" stroke="none" viewbox="0 0 24 24"
+          <div
+            class="mt-3 text-[#c81e3f] group-hover:text-yellow-400 text-xs font-semibold flex items-center gap-1 select-none">
+            <!-- Icon -->
+            <svg class="h-3 w-3" fill="currentColor" stroke="none" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 11V7a1 1 0 112 0v4a1 1 0 11-2 0zm8 0V7a1 1 0 10-2 0v4a1 1 0 102 0zM5 21a2 2 0 01-2-2V7a2 2 0 012-2h1V4a1 1 0 112 0v1h8V4a1 1 0 112 0v1h1a2 2 0 012 2v12a2 2 0 01-2 2H5zM4 9v10a1 1 0 001 1h14a1 1 0 001-1V9H4z">
@@ -343,18 +386,22 @@
             </svg>
             08/05/2025
           </div>
-          <h3 class="mt-1 text-[#0a2e6e] font-semibold text-[16px] leading-5 select-text">
+          <h3 class="mt-1 text-[#0a2e6e] group-hover:text-yellow-400 font-semibold text-[16px] leading-5 select-text">
             NGÀY HỘI THỂ THAO – VUI CHƠI VÀ VẬN ĐỘNG CÙNG BÉ
           </h3>
-          <p class="mt-1 text-[#4a4a4a] text-sm leading-5 select-text">
+          <p class="mt-1 text-[#4a4a4a] group-hover:text-yellow-400 text-sm leading-5 select-text">
             Các bé cùng vui chơi, nhận quà và tham gia trò chơi dân gian thú vị.
           </p>
         </div>
-        <div class="flex-shrink-0 max-w-[370px]">
+
+        <!-- Block 2 -->
+        <div
+          class="group flex-shrink-0 max-w-[370px] transition duration-300 transform hover:scale-105 hover:shadow-xl bg-white rounded-xl p-1">
           <img alt="Smiling child in red shirt playing with purple clay in classroom"
             class="rounded-xl w-full object-cover" height="250" src="./tt2.jpg" width="370" />
-          <div class="mt-3 text-[#c81e3f] text-xs font-semibold flex items-center gap-1 select-none">
-            <svg class="h-3 w-3" fill="currentColor" stroke="none" viewbox="0 0 24 24"
+          <div
+            class="mt-3 text-[#c81e3f] group-hover:text-yellow-400 text-xs font-semibold flex items-center gap-1 select-none">
+            <svg class="h-3 w-3" fill="currentColor" stroke="none" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 11V7a1 1 0 112 0v4a1 1 0 11-2 0zm8 0V7a1 1 0 10-2 0v4a1 1 0 102 0zM5 21a2 2 0 01-2-2V7a2 2 0 012-2h1V4a1 1 0 112 0v1h8V4a1 1 0 112 0v1h1a2 2 0 012 2v12a2 2 0 01-2 2H5zM4 9v10a1 1 0 001 1h14a1 1 0 001-1V9H4z">
@@ -362,18 +409,22 @@
             </svg>
             02/05/2025
           </div>
-          <h3 class="mt-1 text-[#0a2e6e] font-semibold text-[16px] leading-5 select-text">
+          <h3 class="mt-1 text-[#0a2e6e] group-hover:text-yellow-400 font-semibold text-[16px] leading-5 select-text">
             KHÁM PHÁ LỚP HỌC NGHỆ THUẬT ĐẦY MÀU SẮC VÀ SÁNG TẠO
           </h3>
-          <p class="mt-1 text-[#4a4a4a] text-sm leading-5 select-text">
+          <p class="mt-1 text-[#4a4a4a] group-hover:text-yellow-400 text-sm leading-5 select-text">
             Bé được trải nghiệm vẽ tranh, nặn đất sét và phát triển khả năng thẩm mỹ.
           </p>
         </div>
-        <div class="flex-shrink-0 max-w-[370px]">
+
+        <!-- Block 3 -->
+        <div
+          class="group flex-shrink-0 max-w-[370px] transition duration-300 transform hover:scale-105 hover:shadow-xl bg-white rounded-xl p-1">
           <img alt="Group of two adults and two children posing in front of rainbow wall with toy"
             class="rounded-xl w-full object-cover" src="./tt3.jpg" />
-          <div class="mt-3 text-[#c81e3f] text-xs font-semibold flex items-center gap-1 select-none">
-            <svg class="h-3 w-3" fill="currentColor" stroke="none" viewbox="0 0 24 24"
+          <div
+            class="mt-3 text-[#c81e3f] group-hover:text-yellow-400 text-xs font-semibold flex items-center gap-1 select-none">
+            <svg class="h-3 w-3" fill="currentColor" stroke="none" viewBox="0 0 24 24"
               xmlns="http://www.w3.org/2000/svg">
               <path
                 d="M7 11V7a1 1 0 112 0v4a1 1 0 11-2 0zm8 0V7a1 1 0 10-2 0v4a1 1 0 102 0zM5 21a2 2 0 01-2-2V7a2 2 0 012-2h1V4a1 1 0 112 0v1h8V4a1 1 0 112 0v1h1a2 2 0 012 2v12a2 2 0 01-2 2H5zM4 9v10a1 1 0 001 1h14a1 1 0 001-1V9H4z">
@@ -381,14 +432,15 @@
             </svg>
             25/04/2025
           </div>
-          <h3 class="mt-1 text-[#0a2e6e] font-semibold text-[16px] leading-5 select-text">
+          <h3 class="mt-1 text-[#0a2e6e] group-hover:text-yellow-400 font-semibold text-[16px] leading-5 select-text">
             BUỔI HỌP PHỤ HUYNH – KẾT NỐI GIA ĐÌNH VÀ NHÀ TRƯỜNG
           </h3>
-          <p class="mt-1 text-[#4a4a4a] text-sm leading-5 select-text">
+          <p class="mt-1 text-[#4a4a4a] group-hover:text-yellow-400 text-sm leading-5 select-text">
             Cùng thảo luận lộ trình học và chia sẻ phương pháp giáo dục hiệu quả.
           </p>
         </div>
       </div>
+
       <button aria-label="Next"
         class="absolute right-0 top-1/2 -translate-y-1/2 bg-[#c81e3f] w-10 h-10 rounded-full flex items-center justify-center text-white z-10">
         <img src="./muitenphai.png" alt="">
