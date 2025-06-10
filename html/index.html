@@ -68,7 +68,7 @@
   <!-- Top bar -->
   <header class="w-full">
     <div class="max-w-7xl mx-auto flex items-center justify-between py-2 px-4">
-      <div class="flex items-center space-x-2 text-sm text-[#0f2f66] w-80 text-sm leading-tight font-normal">
+      <div class="flex items-center space-x-2 text-[#0f2f66] w-80 text-[14px] leading-tight font-normal">
         <i class="fas fa-map-marker-alt  text-[#0f2f66] text-base">
         </i>
         <span>
@@ -82,9 +82,8 @@
         <img alt="Logo of Trường Mầm Non Việt Học with red and blue colors and a child figure" class="mx-auto"
           src="./logo1.png" />
       </div>
-      <div class="flex items-center space-x-2 text-[#0f2f66] text-sm leading-tight font-normal">
-        <i class="fas fa-phone-alt text-[#0f2f66] text-base">
-        </i>
+      <div class="flex items-center space-x-2 text-[#0f2f66] text-[12] leading-tight font-normal">
+        <img src="./logo2.png" alt="">
         <span>
           <span class="font-semibold">
             Hotline:
@@ -99,26 +98,26 @@
   <!-- Navigation bar -->
   <div class="max-w-[1366] mx-auto">
     <nav class="bg-[#cc2031] flex items-center justify-center gap-10 py-3 px-4">
-      <a class="text-white font-bold text-sm flex items-center gap-1 hover:text-yellow-300 transition-colors duration-200"
+      <a class="text-white text-[18px] font-bold flex items-center gap-1 hover:text-yellow-300 transition-colors duration-200"
         href="#">
         <i class="fas fa-home"></i>
       </a>
-      <a class="text-white font-bold text-sm hover:text-yellow-300 transition-colors duration-200" href="#">
+      <a class="text-white text-[18px] font-bold hover:text-yellow-300 transition-colors duration-200" href="#">
         Giới Thiệu
       </a>
-      <a class="text-white font-bold text-sm hover:text-yellow-300 transition-colors duration-200" href="#">
+      <a class="text-white text-[18px] font-bold  hover:text-yellow-300 transition-colors duration-200" href="#">
         Không Gian Học Tập
       </a>
-      <a class="text-white font-bold text-sm hover:text-yellow-300 transition-colors duration-200" href="#">
+      <a class="text-white text-[18px] font-bold hover:text-yellow-300 transition-colors duration-200" href="#">
         Hoạt Động
       </a>
-      <a class="text-white font-bold text-sm hover:text-yellow-300 transition-colors duration-200" href="#">
+      <a class="text-white text-[18px] font-bold hover:text-yellow-300 transition-colors duration-200" href="#">
         Tuyển Sinh
       </a>
-      <a class="text-white font-bold text-sm hover:text-yellow-300 transition-colors duration-200" href="#">
+      <a class="text-white text-[18px] font-bold hover:text-yellow-300 transition-colors duration-200" href="#">
         Tin Tức
       </a>
-      <a class="text-white font-bold text-sm hover:text-yellow-300 transition-colors duration-200" href="#">
+      <a class="text-white text-[18px] font-bold  hover:text-yellow-300 transition-colors duration-200" href="#">
         Liên Hệ
       </a>
     </nav>
@@ -222,16 +221,36 @@
             </p>
           </div>
         </div>
-        <!-- Second card -->
-        <div class="rounded-xl overflow-hidden w-[320px] h-[240px] flex-shrink-0">
-          <img alt="Two young boys sitting at a green table doing a colorful sticker activity in a classroom"
-            class="w-full h-full object-cover rounded-xl" height="240" src="./CT2.jpg" width="320" />
+        <div class="relative rounded-xl overflow-hidden w-[320px] h-[240px] flex-shrink-0 group">
+          <img alt="Two children wearing yellow hats interacting with a large cartoon cow painting in a classroom"
+            class="w-full h-full object-cover transition duration-300 group-hover:scale-110" height="240"
+            src="./CT2.jpg" width="320" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition duration-300">
+            <h3 class="text-white font-bold text-[14px] leading-[18px] mb-1">
+              KHÁM PHÁ TỰ NHIÊN - BÉ HỌC QUA TRẢI NGHIỆM
+            </h3>
+            <p class="text-white text-[12px] leading-[16px] font-normal max-w-[280px]">
+              Trẻ được tham gia các hoạt động ngoài trời như trồng cây, quan sát côn trùng, và làm ...
+            </p>
+          </div>
         </div>
-        <!-- Third card -->
-        <div class="rounded-xl overflow-hidden w-[320px] h-[240px] flex-shrink-0">
-          <img alt="Group of children sitting on green artificial grass playground with teachers standing nearby"
-            class="w-full h-full object-cover rounded-xl" height="240" src="./CT3.jpg" width="320" />
+        <div class="relative rounded-xl overflow-hidden w-[320px] h-[240px] flex-shrink-0 group">
+          <img alt="Two children wearing yellow hats interacting with a large cartoon cow painting in a classroom"
+            class="w-full h-full object-cover transition duration-300 group-hover:scale-110" height="240"
+            src="./CT3.jpg" width="320" />
+          <div
+            class="absolute inset-0 bg-gradient-to-t from-black/70 to-transparent rounded-xl p-4 flex flex-col justify-end opacity-0 group-hover:opacity-100 transition duration-300">
+            <h3 class="text-white font-bold text-[14px] leading-[18px] mb-1">
+              KHÁM PHÁ TỰ NHIÊN - BÉ HỌC QUA TRẢI NGHIỆM
+            </h3>
+            <p class="text-white text-[12px] leading-[16px] font-normal max-w-[280px]">
+              Trẻ được tham gia các hoạt động ngoài trời như trồng cây, quan sát côn trùng, và làm ...
+            </p>
+          </div>
         </div>
+
+
         <!-- Right arrow -->
         <button aria-label="Next"
           class="absolute right-0 z-10 bg-[#C81E3D] w-10 h-10 rounded-full flex justify-center items-center text-white top-1/2 -translate-y-1/2">
